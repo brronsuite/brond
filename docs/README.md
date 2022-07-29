@@ -226,7 +226,7 @@ configuration necessary, however, there is an optional method to use a
 **3.1 Wallet**
 
 btcd was intentionally developed without an integrated wallet for security
-reasons.  Please see [bronwallet](https://github.com/brronsuite/bronwallet) for more
+reasons.  Please see [btcwallet](https://github.com/brronsuite/btcwallet) for more
 information.
 
 

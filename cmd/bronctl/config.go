@@ -28,11 +28,11 @@ const (
 var (
 	brondHomeDir          = bronutil.AppDataDir("brond", false)
 	bronctlHomeDir        = bronutil.AppDataDir("bronctl", false)
-	bronwalletHomeDir     = bronutil.AppDataDir("bronwallet", false)
+	btcwalletHomeDir      = bronutil.AppDataDir("btcwallet", false)
 	defaultConfigFile     = filepath.Join(bronctlHomeDir, "bronctl.conf")
 	defaultRPCServer      = "localhost"
 	defaultRPCCertFile    = filepath.Join(brondHomeDir, "rpc.cert")
-	defaultWalletCertFile = filepath.Join(bronwalletHomeDir, "rpc.cert")
+	defaultWalletCertFile = filepath.Join(btcwalletHomeDir, "rpc.cert")
 )
 
 // listCommands categorizes and lists all of the usable commands along with
@@ -214,7 +214,7 @@ func loadConfig() (*config, []string, error) {
 		// Use config file for RPC server to create default bronctl config
 		var serverConfigPath string
 		if preCfg.Wallet {
-			serverConfigPath = filepath.Join(bronwalletHomeDir, "bronwallet.conf")
+			serverConfigPath = filepath.Join(btcwalletHomeDir, "btcwallet.conf")
 		} else {
 			serverConfigPath = filepath.Join(brondHomeDir, "brond.conf")
 		}
@@ -281,7 +281,7 @@ func loadConfig() (*config, []string, error) {
 
 // createDefaultConfig creates a basic config file at the given destination path.
 // For this it tries to read the config file for the RPC server (either brond or
-// bronwallet), and extract the RPC user and password from it.
+// btcwallet), and extract the RPC user and password from it.
 func createDefaultConfigFile(destinationPath, serverConfigPath string) error {
 	// Read the RPC server config
 	serverConfigFile, err := os.Open(serverConfigPath)

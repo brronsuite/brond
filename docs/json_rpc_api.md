@@ -36,7 +36,7 @@ differences between brond and brocoind as far as how RPCs are serviced:
   further details on why they were separated.  This means that if you are
   talking directly to brond, only chain-related RPCs are available.  However both
   chain-related and wallet-related RPCs are available via
-  [btcwallet](https://github.com/brronsuite/bronwallet).
+  [btcwallet](https://github.com/brronsuite/btcwallet).
 * brond is secure by default which means that the RPC connection is TLS-enabled
   by default
 * brond provides access to the API through both
@@ -44,7 +44,7 @@ differences between brond and brocoind as far as how RPCs are serviced:
   [Websockets](http://en.wikipedia.org/wiki/WebSocket)
 
 Websockets are the preferred transport for brond RPC and are used by applications
-such as [btcwallet](https://github.com/brronsuite/bronwallet) for inter-process
+such as [btcwallet](https://github.com/brronsuite/btcwallet) for inter-process
 communication with brond.  The websocket connection endpoint for brond is
 `wss://your_ip_or_domain:8360/ws`.
 
