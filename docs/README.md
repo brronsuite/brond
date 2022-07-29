@@ -129,11 +129,11 @@ $ git pull && GO111MODULE=on go install -v . ./cmd/...
 btcd has a number of [configuration](http://godoc.org/github.com/btcsuite/btcd)
 options, which can be viewed by running: `$ btcd --help`.
 
-<a name="BtcctlConfig" />
+<a name="BronctlConfig" />
 
-**2.3 Controlling and Querying btcd via btcctl**
+**2.3 Controlling and Querying btcd via bronctl**
 
-btcctl is a command line utility that can be used to both control and query btcd
+bronctl is a command line utility that can be used to both control and query btcd
 via [RPC](http://www.wikipedia.org/wiki/Remote_procedure_call).  btcd does
 **not** enable its RPC server by default;  You must configure at minimum both an
 RPC username and password or both an RPC limited username and password:
@@ -158,7 +158,7 @@ OR
 rpclimituser=mylimituser
 rpclimitpass=Limitedp4ssw0rd
 ```
-For a list of available options, run: `$ btcctl --help`
+For a list of available options, run: `$ bronctl --help`
 
 <a name="Mining" />
 
